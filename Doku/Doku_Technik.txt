@@ -1,0 +1,5 @@
+• Als WebHost, wird ein privater Server zu Hause verwendet.
+• Auf dem Server läuft ein Linux, welches in einem LXC (Linux Container) mittels nginx einen WebServer bereitstellt.
+• Der Zugriff aus dem WWW erfolgt mittels Dynamischem DNS, da der private Internetanschluss keine feste IPv4 Adresse hat und noch nicht alle Geräte oder Internetanschlüsse IPv6 kompatibel sind.
+• Da auf diesem Netzanschluss noch mehrere Webseiten erreichbar sind, läuft das Setup hinter einem Reverse Proxy, dies soll hier aber nicht Teil der Dokumentation werden
+• Zur Absicherung der Verbindung wird SSL eingesetzt, das Zertifikat wurde von letsencrypt zertifiziert
