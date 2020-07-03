@@ -1,7 +1,0 @@
-data/*.json
-data/*.gz
-data/*.tgz
-data/*.tre
-*~
-bin/*
-!.gitkeep
