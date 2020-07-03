@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>Tree of Life - d3.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <meta property="og:url"                content="https://oseiskar.github.io/tree-of-life" />
+    <meta property="og:title"              content="Tree of Life" />
+    <meta property="og:description"        content="An interactive visualization of the Open Tree of Life using d3.js. The entire tree with approximately 2.3 million identified species as leaf nodes is browsable through the application." />
+    <meta property="og:image"              content="http://oseiskar.github.io/img/tree-of-life.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="bar navbar hidden">
+    <span class="title">
+         <a href="https://github.com/oseiskar/tree-of-life/blob/master/README.md">Tree of Life</a>
+    </span>
+    <span class="search">
+        <input id="search" autocomplete="off" placeholder="search..."/>
+        <a id="goto-link" href="javascript:void(0)" class="hidden">&gt;</a>
+        <div id="results"></div>
+    </span>
+    <span class="loader-container">
+        <img id="loader" src="loader.gif"/>
+    </span>
+</div>
+<div id="page-loader"><img src="loader.gif"/></div>
+<div class="svg-container">
+<svg id="tree" preserveAspectRatio="xMinYMin meet">
+</svg>
+</div>
+<div class="bar foot hidden">
+    <a href="https://github.com/oseiskar/tree-of-life/blob/master/COPYRIGHT.md">Data: &copy; Open Tree of Life, 2015 &mdash; Visualization by oseiskar</a>
+</div>
+</body>
+<script src="tree-model.js"></script>
+<script src="tree-view.js"></script>
+<script src="search.js"></script>
+<script type="text/javascript">
+    "use strict";
+    var tree_of_life_view = new TreeOfLifeView();
+    var search_view = new SearchView(tree_of_life_view.expandNodeCallback);
+</script>
+</html>
