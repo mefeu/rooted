@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background: rgb(226,198,181);
+    background: linear-gradient(180deg, rgba(170,228,196,1) 0%, rgba(217,246,229,1) 20%, rgba(255,255,255,1) 24%, rgba(226,198,181,1) 66%);
 }
 
 .svg-container {
@@ -25,13 +27,17 @@ body {
     cursor: pointer;
 }
 
+.logo:hover{
+    width:30%;
+}
+
 #page-loader {
     width: 100%;
     text-align: center;
     margin-top: 20%;
 }
 
-/* loader from 
+/* loader from
  * http://loading.io/loader/?use=eyJzaXplIjoxNSwic3BlZWQiOiIxIiwiY2JrIjoiI2ZmZmZmZiIsImMxIjoiI2M1ZDljNSIsImMyIjoiMjAiLCJjMyI6IjEwIiwidHlwZSI6InJvbGxpbmcifQ==
  */
 #loader {
@@ -102,8 +108,13 @@ body {
     display: inline-block;
     width: 80%;
     font-size: 14pt;
-    border: 0;
-    border-bottom: 1px solid gray;
+    border-radius:25px;
+    border: 2px solid gray;
+    padding:10px;
+}
+
+#title{
+    text-shadow: 2px 2px 5px lightslategrey;
 }
 
 #search.not-found {

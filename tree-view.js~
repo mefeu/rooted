@@ -368,7 +368,7 @@ TreeOfLifeView.prototype.renderTexts = function(nodes, last_level) {
             return d.i === model.hilighted_node_id;
         })
         .attr('font-size', function (d) { return d.visual.font_size; })
-        .attr('font-family', 'verdana')
+        .attr('font-family', 'Arial')
         .transition()
         .attr('x', function(d) { return d.visual.cx + style.text_margin_left; })
         .attr('y', function(d) { return d.visual.cy; })
@@ -402,26 +402,32 @@ TreeOfLifeView.prototype.renderPaths = function (nodes) {
         })
         .transition()
         .attr('d', function (d) {
-            var w = d.visual.cx - d.parent.visual.cx;
+            //var w = d.visual.cx - d.parent.visual.cx;
+            var h = d.visual.cy - d.parent.visual.cy;
             
             // try to avoid seams
-            var x0 = Math.round(d.parent.visual.cx);
-            var x1 = Math.round(d.visual.cx)+1;
+            //var x0 = Math.round(d.parent.visual.cx);
+            //var x1 = Math.round(d.visual.cx)+1;
+            var y0 = Math.round(d.parent.visual.cy);
+            var y1 = Math.round(d.visual.cy)+1;
             
-            var p = SvgPath.moveTo(x0, d.visual.parent_link.y0) +
+            var p = SvgPath.moveTo(d.visual.parent_link.x0, y0) +
                 SvgPath.curveTo(
-                    x0 + w*0.2, d.visual.parent_link.y0,
-                    x1 - w*0.2, d.visual.y0,
-                    x1 + 1, d.visual.y0);
+                    //x0 + w*0.2, d.visual.parent_link.y0,
+                    //x1 - w*0.2, d.visual.y0,
+                    //x1 + 1, d.visual.y0);
+						  d.visual.parent_link.x0, y0 + h*0.2,
+                    d.visual.x0, y1 - h*0.2,
+                    d.visual.x0, y1 + 1);
             
             if (d.visual.line_only) return p;
             
             return p +
-                SvgPath.lineTo(x1, d.visual.y1) +
+                SvgPath.lineTo(d.visual.x1, y1) +
                 SvgPath.curveTo(
-                    x1 - w*0.2, d.visual.y1,
-                    x0 + w*0.2, d.visual.parent_link.y1,
-                    x0, d.visual.parent_link.y1) +
+                    d.visual.x1, y1 - h*0.2,
+                    d.visual.parent_link.x0, y1  + h*0.2,
+                    d.visual.parent_link.x0, y1) +
                 SvgPath.close;
         });
 }
