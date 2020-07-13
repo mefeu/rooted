@@ -16,7 +16,7 @@ var SvgPath = {
 function Style() {
     
     this.SCALE_LEVELS = {
-        color: ['#f542d1', '#f542d1'],
+        color: ['#bd9146', '#bd9146'],
         opacity: ['1.0', '1.0']
     }
     
@@ -347,15 +347,30 @@ TreeOfLifeView.prototype.computeLevelVisualPositions = function (data, depth) {
     });
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 TreeOfLifeView.prototype.renderTexts = function(nodes, last_level) {
     
     var model = this.model;
     var style = this.style;
     
     var new_nodes = nodes.enter()
-        .append('g');
+        .append('g');    
+	 
+	 var lorem = ['Lorem ipsum dolor sit amet, consectetur adipisici elit, …',
+	 'Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+	 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.',
+	 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium',
+	 'Et harum quidem rerum facilis est et expedita distinctio.',
+	 ' Concentrandoci su casi di piccola importanza: chi di noi intraprende un esercizio ginnico, se non per ottenerne un qualche vantaggio',
+	 'Ma in altri momenti, o nei doveri inevitabili o negli obblighi che ci vengono dalle circostanze, spesso accadrà che si debba respingere il piacere e accogliere il fastidio'];    
+    
         
-    new_nodes.append('title').text('Lorem ipsum dolor sit amet, consectetur adipisici elit, …');
+    new_nodes.append('title').text(lorem[getRandomInt(0, lorem.length - 1 )]);
     
     new_nodes.append('text')
         .text(function(d) {
