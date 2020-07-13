@@ -27,9 +27,6 @@ body {
     cursor: pointer;
 }
 
-.logo:hover{
-    width:30%;
-}
 
 #page-loader {
     width: 100%;
