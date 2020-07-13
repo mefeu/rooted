@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    background: rgb(226,198,181);
-    background: linear-gradient(180deg, rgba(170,228,196,1) 0%, rgba(217,246,229,1) 20%, rgba(255,255,255,1) 24%, rgba(226,198,181,1) 66%);
+    /* background: rgb(226,198,181);
+    background: linear-gradient(180deg, rgba(170,228,196,1) 0%, rgba(217,246,229,1) 20%, rgba(255,255,255,1) 24%, rgba(226,198,181,1) 66%); */
 }
 
 .svg-container {
@@ -105,11 +105,21 @@ body {
     display: inline-block;
     width: 80%;
     font-size: 14pt;
-    border-radius:25px;
-    border: 2px solid gray;
-    padding:10px;
+    border: 0;
+    background: #f2f2f2;
+    border-radius: 40px;
+    border-top-style: none;
 }
 
+#search:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
+    border: 2px solid #f2f2f2;
+    padding: 10px 5px;
+
+
+}
 #title{
     text-shadow: 2px 2px 5px lightslategrey;
 }
