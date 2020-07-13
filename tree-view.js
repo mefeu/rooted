@@ -368,6 +368,7 @@ TreeOfLifeView.prototype.renderTexts = function(nodes, last_level) {
             return d.i === model.hilighted_node_id;
         })
         .attr('font-size', function (d) { return d.visual.font_size; })
+        .attr('font-family', 'verdana')
         .transition()
         .attr('x', function(d) { return d.visual.cx + style.text_margin_left; })
         .attr('y', function(d) { return d.visual.cy; })

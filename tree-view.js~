@@ -17,7 +17,7 @@ function Style() {
     
     this.SCALE_LEVELS = {
         color: ['#cc6339', '#2727c4'],
-        opacity: ['0.5', '0.5']
+        opacity: ['1.0', '1.0']
     }
     
     this.N_SCALE_LEVELS = this.SCALE_LEVELS.color.length;
