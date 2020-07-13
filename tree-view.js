@@ -16,7 +16,7 @@ var SvgPath = {
 function Style() {
     
     this.SCALE_LEVELS = {
-        color: ['#cc6339', '#2727c4'],
+        color: ['#f542d1', '#f542d1'],
         opacity: ['1.0', '1.0']
     }
     
@@ -354,6 +354,8 @@ TreeOfLifeView.prototype.renderTexts = function(nodes, last_level) {
     
     var new_nodes = nodes.enter()
         .append('g');
+        
+    new_nodes.append('title').text('Lorem ipsum dolor sit amet, consectetur adipisici elit, …');
     
     new_nodes.append('text')
         .text(function(d) {

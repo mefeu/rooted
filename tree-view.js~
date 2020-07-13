@@ -16,7 +16,7 @@ var SvgPath = {
 function Style() {
     
     this.SCALE_LEVELS = {
-        color: ['#cc6339', '#2727c4'],
+        color: ['#f542d1', '#f542d1'],
         opacity: ['1.0', '1.0']
     }
     
@@ -354,6 +354,8 @@ TreeOfLifeView.prototype.renderTexts = function(nodes, last_level) {
     
     var new_nodes = nodes.enter()
         .append('g');
+        
+    new_nodes.append('title').text('Lorem ipsum dolor sit amet, consectetur adipisici elit, …');
     
     new_nodes.append('text')
         .text(function(d) {
@@ -402,32 +404,26 @@ TreeOfLifeView.prototype.renderPaths = function (nodes) {
         })
         .transition()
         .attr('d', function (d) {
-            //var w = d.visual.cx - d.parent.visual.cx;
-            var h = d.visual.cy - d.parent.visual.cy;
+            var w = d.visual.cx - d.parent.visual.cx;
             
             // try to avoid seams
-            //var x0 = Math.round(d.parent.visual.cx);
-            //var x1 = Math.round(d.visual.cx)+1;
-            var y0 = Math.round(d.parent.visual.cy);
-            var y1 = Math.round(d.visual.cy)+1;
+            var x0 = Math.round(d.parent.visual.cx);
+            var x1 = Math.round(d.visual.cx)+1;
             
-            var p = SvgPath.moveTo(d.visual.parent_link.x0, y0) +
+            var p = SvgPath.moveTo(x0, d.visual.parent_link.y0) +
                 SvgPath.curveTo(
-                    //x0 + w*0.2, d.visual.parent_link.y0,
-                    //x1 - w*0.2, d.visual.y0,
-                    //x1 + 1, d.visual.y0);
-						  d.visual.parent_link.x0, y0 + h*0.2,
-                    d.visual.x0, y1 - h*0.2,
-                    d.visual.x0, y1 + 1);
+                    x0 + w*0.2, d.visual.parent_link.y0,
+                    x1 - w*0.2, d.visual.y0,
+                    x1 + 1, d.visual.y0);
             
             if (d.visual.line_only) return p;
             
             return p +
-                SvgPath.lineTo(d.visual.x1, y1) +
+                SvgPath.lineTo(x1, d.visual.y1) +
                 SvgPath.curveTo(
-                    d.visual.x1, y1 - h*0.2,
-                    d.visual.parent_link.x0, y1  + h*0.2,
-                    d.visual.parent_link.x0, y1) +
+                    x1 - w*0.2, d.visual.y1,
+                    x0 + w*0.2, d.visual.parent_link.y1,
+                    x0, d.visual.parent_link.y1) +
                 SvgPath.close;
         });
 }
