@@ -109,6 +109,8 @@ body {
     background: #f2f2f2;
     border-radius: 40px;
     border-top-style: none;
+    padding-left: 20px !important;
+    line-height: 40px;
 }
 
 #search:focus {
@@ -117,6 +119,7 @@ body {
     box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
     border: 2px solid #f2f2f2;
     padding: 10px 5px;
+    line-height: 28px;
 
 
 }
