@@ -16,7 +16,7 @@ var SvgPath = {
 function Style() {
     
     this.SCALE_LEVELS = {
-        color: ['#c5d9c5', '#d8d8ec'],
+        color: ['#cc6339', '#2727c4'],
         opacity: ['1.0', '1.0']
     }
     
@@ -409,8 +409,8 @@ TreeOfLifeView.prototype.renderPaths = function (nodes) {
             
             var p = SvgPath.moveTo(x0, d.visual.parent_link.y0) +
                 SvgPath.curveTo(
-                    x0 + w*0.5, d.visual.parent_link.y0,
-                    x1 - w*0.5, d.visual.y0,
+                    x0 + w*0.2, d.visual.parent_link.y0,
+                    x1 - w*0.2, d.visual.y0,
                     x1 + 1, d.visual.y0);
             
             if (d.visual.line_only) return p;
@@ -418,8 +418,8 @@ TreeOfLifeView.prototype.renderPaths = function (nodes) {
             return p +
                 SvgPath.lineTo(x1, d.visual.y1) +
                 SvgPath.curveTo(
-                    x1 - w*0.5, d.visual.y1,
-                    x0 + w*0.5, d.visual.parent_link.y1,
+                    x1 - w*0.2, d.visual.y1,
+                    x0 + w*0.2, d.visual.parent_link.y1,
                     x0, d.visual.parent_link.y1) +
                 SvgPath.close;
         });
