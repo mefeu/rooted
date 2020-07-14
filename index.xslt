@@ -11,6 +11,11 @@
     <span class="title">
  			<a href="https://rooted.ddnss.de/tree.xml"><img src="assets/icon.svg" alt="rooted" width="200" class="logo"/></a>
     </span>
+    <span class="search">
+        <input id="search" autocomplete="off" placeholder="Suche"/>
+        <a id="goto-link" href="javascript:void(0)" class="hidden"></a>
+        <div id="results"></div>
+    </span>
 </div>
     <div class="tree">
     <xsl:apply-templates/>
