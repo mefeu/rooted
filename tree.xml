@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="index.xslt" type="text/xsl"?>
 <top>
-<node text="cellular organisms">
+<node text="Life">
 	<node text="Eukaryota">
 		<node text="Opisthokonta">
 			<node text="Holozoa">
