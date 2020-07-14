@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+<html>
+<head>
+    <title>Rooted</title>
+    <meta property="og:url"                content="https://rooted.ddnss.de/" />
+    <meta property="og:title"              content="rooted" />
+    <meta property="og:image"              content="https://rooted.ddnss.de/assets/icon.svg" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div>
+    <span class="title">
+ 			<a href="https://rooted.ddnss.de/"><img src="assets/icon.svg" alt="rooted" width="200" class="logo"></a>
+    </span>
+</div>
+<div class="tree">
+
+</div>
+<div class="footer"><p>Quelle: <a href="https://opentreeoflife.github.io/">Open Tree of Life</a></p>
+<p>Open Tree of Life erfasst einen umfassenden und digital verfügbaren Lebensbaum,</p> 
+<p>indem veröffentlichte phylogenetische Bäume zusammen mit taxonomischen Daten synthetisiert werden.</p></div>
+</body>
+<script src="rooted-model.js"></script>
+<script src="rooted-view.js"></script>
+<script src="rooted-search.js"></script>
+<script type="text/javascript">
+    "use strict";
+    var tree_of_life_view = new TreeOfLifeView();
+    var search_view = new SearchView(tree_of_life_view.expandNodeCallback);
+</script>
+</html>
+</xsl:template>
+
+</xsl:stylesheet>
