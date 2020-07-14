@@ -12,8 +12,7 @@
 <body>
 <div class="bar navbar hidden">
     <span class="title">
- 			<img src="assets/icon.svg" alt="rooted" width="200" class="logo"> <br/>
-         
+ 			<a href="http://rooted.ddnss.de/"><img src="assets/icon.svg" alt="rooted" width="200" class="logo"></a>
     </span>
     <span class="search">
         <input id="search" autocomplete="off" placeholder="Suche"/>
