@@ -21,6 +21,15 @@
 																<node text="Homo sapiens"/>
 																<node text="Homo heidelbergensis"/>
 															</node>
+															<node text="Pan">
+															</node>
+														</node>
+														<node text="Ponginae">
+															<node text="Pongo">
+																<node text="Pongo abelii"/>
+																<node text="Pongo pygmaeus">
+																</node>
+															</node>
 														</node>
 													</node>
 												</node>
