@@ -6,15 +6,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
     <meta property="og:url"                content="http://rooted.ddnss.de/" />
     <meta property="og:title"              content="rooted" />
-    <meta property="og:image"              content="http://rooted.ddnss.de/assets/icon.jpg" />
+    <meta property="og:image"              content="http://rooted.ddnss.de/assets/icon.svg" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="assets\icon.ico">
 </head>
 <body>
 <div class="bar navbar hidden">
     <span class="title">
- 			<img src="assets/icon.svg" alt="rooted" width="200" class="logo"> <br/>
-         
+ 			<a href="http://rooted.ddnss.de/"><img src="assets/icon.svg" alt="rooted" width="200" class="logo"></a>
     </span>
     <span class="search">
         <input id="search" autocomplete="off" placeholder="Suche"/>
@@ -27,6 +25,9 @@
 <svg id="tree" preserveAspectRatio="xMinYMin meet">
 </svg>
 </div>
+<div class="footer"><p>Quelle: <a href="https://opentreeoflife.github.io/">Open Tree of Life</a></p>
+<p>Open Tree of Life erfasst einen umfassenden und digital verfügbaren Lebensbaum,</p> 
+<p>indem veröffentlichte phylogenetische Bäume zusammen mit taxonomischen Daten synthetisiert werden.</p></div>
 </body>
 <script src="tree-model.js"></script>
 <script src="tree-view.js"></script>

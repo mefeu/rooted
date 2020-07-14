@@ -1,10 +1,5 @@
 body {
-    margin: 0;
-    background-image: url('assets/icon.jpg');
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color:rgba(0, 0, 0, 0.5);
+    margin: 0;   
 }
 
 .svg-container {
@@ -30,15 +25,13 @@ body {
     cursor: pointer;
 }
 
+
 #page-loader {
     width: 100%;
     text-align: center;
     margin-top: 20%;
 }
 
-/* loader from 
- * http://loading.io/loader/?use=eyJzaXplIjoxNSwic3BlZWQiOiIxIiwiY2JrIjoiI2ZmZmZmZiIsImMxIjoiI2M1ZDljNSIsImMyIjoiMjAiLCJjMyI6IjEwIiwidHlwZSI6InJvbGxpbmcifQ==
- */
 #loader {
     display: inline-block;
     vertical-align: middle;
@@ -108,7 +101,25 @@ body {
     width: 80%;
     font-size: 14pt;
     border: 0;
-    border-bottom: 1px solid gray;
+    background: #f2f2f2;
+    border-radius: 40px;
+    border-top-style: none;
+    padding-left: 20px !important;
+    line-height: 40px;
+}
+
+#search:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
+    border: 2px solid #f2f2f2;
+    padding: 10px 5px;
+    line-height: 28px;
+
+
+}
+#title{
+    text-shadow: 2px 2px 5px lightslategrey;
 }
 
 #search.not-found {
@@ -130,4 +141,12 @@ body {
 a {
     text-decoration: none;
     color: black;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
 }

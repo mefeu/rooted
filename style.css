@@ -1,7 +1,5 @@
 body {
-    margin: 0;
-    /* background: rgb(226,198,181);
-    background: linear-gradient(180deg, rgba(170,228,196,1) 0%, rgba(217,246,229,1) 20%, rgba(255,255,255,1) 24%, rgba(226,198,181,1) 66%); */
+    margin: 0;   
 }
 
 .svg-container {
@@ -34,9 +32,6 @@ body {
     margin-top: 20%;
 }
 
-/* loader from
- * http://loading.io/loader/?use=eyJzaXplIjoxNSwic3BlZWQiOiIxIiwiY2JrIjoiI2ZmZmZmZiIsImMxIjoiI2M1ZDljNSIsImMyIjoiMjAiLCJjMyI6IjEwIiwidHlwZSI6InJvbGxpbmcifQ==
- */
 #loader {
     display: inline-block;
     vertical-align: middle;
@@ -145,5 +140,13 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: red;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
 }
