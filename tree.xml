@@ -7,27 +7,48 @@
 			<node text="Holozoa">
 				<node text="Metazoa">
 					<node text="Bilateria"/>
-					<node text="Deuterostomia">
-						<node text="Choradata">
-							<node text="Caraniata">
-								<node text="Vertebrata">
-									<node text="Gnathostomata">
-										<node text="Teleostomi">
-											<node text="Euteleostomi">
-												<node text="Sarcopterygii">
-													<node text="Primates">
-														<node text="Homininae">
-															<node text="Homo">
-																<node text="Homo sapiens"/>
-																<node text="Homo heidelbergensis"/>
-															</node>
-															<node text="Pan">
-															</node>
-														</node>
-														<node text="Ponginae">
-															<node text="Pongo">
-																<node text="Pongo abelii"/>
-																<node text="Pongo pygmaeus">
+						<node text="Deuterostomia">
+							<node text="Choradata">
+								<node text="Caraniata">
+									<node text="Vertebrata">
+										<node text="Gnathostomata">
+											<node text="Teleostomi">
+												<node text="Euteleostomi">
+													<node text="Sarcopterygii">
+														<node text="Dipnotetrapodomorpha">
+															<node text="Tetrapoda">
+																<node text="Amniota">
+																	<node text="Mammalia">
+																		<node text="Theria">
+																			<node text="Eutheria">
+																				<node text="Boreoeutheria">
+																					<node text="Primates">
+																						<node text="Haplorrhini">
+																							<node text="Simiiformes">
+																								<node text="Catarrhini">
+																									<node text="Homininae">
+																										<node text="Homo">
+																											<node text="Homo sapiens"/>
+																											
+																											<node text="Homo heidelbergensis"/>
+																											
+																										</node>
+																									</node>
+																									<node text="Ponginae">
+																											<node text="Pongo">
+																												<node text="Pongo abelii"/>
+																												
+																												<node text="Pongo pygmaeus"/>
+																											</node>
+																									</node>
+																								</node>
+																							</node>
+																						</node>
+																					</node>
+																				</node>
+																			</node>
+																		</node>
+																	</node>
 																</node>
 															</node>
 														</node>
@@ -39,7 +60,7 @@
 								</node>
 							</node>						
 						</node>					
-					</node>				
+					</node>	
 				</node>			
 			</node>		
 		</node>
