@@ -1,31 +1,24 @@
 "use strict";
 
 /**
- * An API to the prefix search tree that maps the names of the tree of life
- * nodes to the node and subtree indices of those nodes.
- * 
- * Usage:
- *      function resultCallback(query, resultTrieNode) { ... }
- *      search_model.searchFor('Canis', resultCallback)
- * 
- * where resultTrieNode is like
- * 
- *     {
+ * Die Rooted-Search dient zur Suche im "Tree of Life". Sie mapped die namen der Knotenpunkte zu den Knoten- und deren Unterbäume mit indizes.
+ * Beispiel Ergebnis einer Suche, bei der der Aufbau wie folgt aussehen kann:
+ * {
  *       v: [
- *         123,   // id of the node for the node called 'Canis lupus' 
- *         2      // id of the subtree where that node is located
+ *         12345,   // id des Knotens für den Knoten namens 'Canis lupus' mit exaktem match.
+ *         2      // id des Knotens in dem der Subtree für das Gesuchte Wort zu finden ist.
  *       ],
- *       c: {     // children 'Canis lupus' in the prefix tree
+ *       c: {     // Kind-Knoten in denen der Präfix 'Canis lupus' mindestens enthalten ist.
  *          " familiaris": { ... },
  *           ...
  *       }
  *     }
  * 
- * or null if the no name in the tree starts with the given query.
- * The member v is set only if query corresponds to the exact name of
- * some node in the tree. The member c can also be empty if query if is not
- * a proper prefix of any other node in the tree.
- * 
+ *     
+ * oder null, wenn kein Name im Baum mit der angegebenen Abfrage beginnt.
+ * Das Knotenglied V wird nur dann verwendet wenn die Suche mit dem exakten Namen des Knotens im Baum übereinstimmt.
+ * Das Knotenglied C kann leer sein, wenn es kein richtiges Präfix eines anderen Baumes ist,
+ * verweist es hierbei auf weitere oder auf namenlose unterverzweigungen.
  */
 function SearchModel(search_ready_callback) {
     
