@@ -25,7 +25,8 @@
 <xsl:template match="node">
 
     <ul>
-        <li><xsl:value-of select="@text"/></li>
+	    <li><xsl:value-of select="@text"/></li>
+	    <li><xsl:value-of select="@name"/></li>
         <xsl:for-each select="child::node">
             <ul>
                 <li>

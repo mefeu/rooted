@@ -9,25 +9,21 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_response(200)
 
         # Setting the header
-        self.send_header("Content-type", "text/xsl")
+        self.send_header("Content-type", "text/xml")
         #self.send_header('Access-Control-Allow-Origin', 'https://rooted.ddnss.de/')
         # Whenever using 'send_header', you also have to call 'end_headers'
         self.end_headers()
 
         # Extract query param
-        name = 'World'
-        query_components = parse_qs(urlparse(self.path).query)
-        print(query_components)
-        if 'name' in query_components:
-            name = query_components["name"][0]
-
-        import lxml.etree as etree
-        roottree = etree.parse('tree.xml')
-        
-
+        #name = 'World'
+        #query_components = parse_qs(urlparse(self.path).query)
+        #print(query_components)
+        #if 'name' in query_components:
+        #    name = query_components["name"][0]
+        print('hallo')
         with open('/var/www/rooted/tree.xml', 'rb') as file:
             self.wfile.write(file.read())
-
+            print(file.read().decode())
         return
 
 # Create an object of the above class
