@@ -22,7 +22,50 @@
 </body>
 </html>
 </xsl:template>
-<xsl:template match="node">
+	<xsl:template name="hedge2svg">
+
+  <!-- Hedge is passed as parameter -->
+
+  <xsl:param name="hedge"/>
+
+
+
+  <!-- Parse text hedge into XML nodes -->
+
+  <xsl:variable name="tree">
+
+    <xsl:call-template name="hedge2xml">
+
+      <xsl:with-param name="hedge" select="$hedge"/>
+
+    </xsl:call-template>
+
+  </xsl:variable>
+
+
+
+  <!-- Add layout information to XML nodes -->
+
+  <xsl:variable name="layoutTree">
+
+    <xsl:apply-templates select="exsl:node-set($tree)/node" mode="xml2layout"/>
+
+  </xsl:variable>
+
+
+
+  <!-- Turn XML nodes into SVG image -->
+
+  <xsl:call-template name="layout2svg">
+
+    <xsl:with-param name="layout" select="exsl:node-set($layoutTree)"/>
+
+  </xsl:call-template>
+
+
+
+</xsl:template>
+<!--//<xsl:template match="node">
 
     <ul>
 	    <li><xsl:value-of select="@text"/></li>
@@ -37,5 +80,5 @@
         </xsl:for-each>
     </ul>
 
-</xsl:template>
+</xsl:template>-->
 </xsl:stylesheet>
