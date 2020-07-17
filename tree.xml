@@ -1,42 +1,39 @@
 <?xml-stylesheet href="index.xslt" type="text/xsl"?>
-<top width="4" depth="1">
-<node id="0" text="Life" width="4" depth="2">
-<node id="1" text="Eukaryota" width="4" depth="3">
-<node id="1000" text="Opisthokonta" width="4" depth="4">
-<node id="2000" text="Holozoa" width="4" depth="5">
-<node id="4000" text="Metazoa" width="4" depth="6">
-<node id="5000" text="Bilateria" width="4" depth="7">
-<node id="10000" text="Deuterostomia" width="4" depth="8">
-<node id="20000" text="Choradata" width="4" depth="9">
-<node id="21000" text="Caraniata" width="4" depth="10">
-<node id="23000" text="Vertebrata" width="4" depth="11">
-<node id="27000" text="Gnathostomata" width="4" depth="12">
-<node id="30000" text="Teleostomi" width="4" depth="13">
-<node id="31000" text="Euteleostomi" width="4" depth="14">
-<node id="32000" text="Sarcopterygii" width="4" depth="15">
-<node id="34000" text="Dipnotetrapodomorpha" width="4" depth="16">
-<node id="50000" text="Tetrapoda" width="4" depth="17">
-<node id="55000" text="Amniota" width="4" depth="18">
-<node id="59000" text="Mammalia" width="4" depth="19">
-<node id="70000" text="Theria" width="4" depth="20">
-<node id="75000" text="Eutheria" width="4" depth="21">
-<node id="79000" text="Boreoeutheria" width="4" depth="22">
-<node id="92000" text="Primates" width="4" depth="23">
-<node id="100000" text="Haplorrhini" width="4" depth="24">
-<node id="120000" text="Simiiformes" width="4" depth="25">
-<node id="170000" text="Catarrhini" width="4" depth="26">
-<node id="200000" text="Homininae" width="2" depth="27">
-<node id="250000" text="Homo" width="2" depth="28">
-<node id="300000" text="Homo sapiens" width="1" depth="29"/>
-<node id="300001" text="Homo heidelbergensis" width="1" depth="29"/>
+<node id="0" text="Life" width="4" depth="1">
+<node id="1" text="Eukaryota" width="4" depth="2">
+<node id="1000" text="Opisthokonta" width="4" depth="3">
+<node id="2000" text="Holozoa" width="4" depth="4">
+<node id="4000" text="Metazoa" width="4" depth="5">
+<node id="5000" text="Bilateria" width="4" depth="6">
+<node id="10000" text="Deuterostomia" width="4" depth="7">
+<node id="20000" text="Choradata" width="4" depth="8">
+<node id="21000" text="Caraniata" width="4" depth="9">
+<node id="23000" text="Vertebrata" width="4" depth="10">
+<node id="27000" text="Gnathostomata" width="4" depth="11">
+<node id="30000" text="Teleostomi" width="4" depth="12">
+<node id="31000" text="Euteleostomi" width="4" depth="13">
+<node id="32000" text="Sarcopterygii" width="4" depth="14">
+<node id="34000" text="Dipnotetrapodomorpha" width="4" depth="15">
+<node id="50000" text="Tetrapoda" width="4" depth="16">
+<node id="55000" text="Amniota" width="4" depth="17">
+<node id="59000" text="Mammalia" width="4" depth="18">
+<node id="70000" text="Theria" width="4" depth="19">
+<node id="75000" text="Eutheria" width="4" depth="20">
+<node id="79000" text="Boreoeutheria" width="4" depth="21">
+<node id="92000" text="Primates" width="4" depth="22">
+<node id="100000" text="Haplorrhini" width="4" depth="23">
+<node id="120000" text="Simiiformes" width="4" depth="24">
+<node id="170000" text="Catarrhini" width="4" depth="25">
+<node id="200000" text="Homininae" width="2" depth="26">
+<node id="250000" text="Homo" width="2" depth="27">
+<node id="300000" text="Homo sapiens" width="1" depth="28"/>
+<node id="300001" text="Homo heidelbergensis" width="1" depth="28"/>
 </node>
 </node>
-<node id="200001" text="Ponginae" width="2" depth="27">
-<node id="200011" text="Pongo" width="2" depth="28">
-<node id="200012" text="Pongo abelii" width="1" depth="29"/>
-<node id="200013" text="Pongo pygmaeus" width="1" depth="29"/>
-</node>
-</node>
+<node id="200001" text="Ponginae" width="2" depth="26">
+<node id="200011" text="Pongo" width="2" depth="27">
+<node id="200012" text="Pongo abelii" width="1" depth="28"/>
+<node id="200013" text="Pongo pygmaeus" width="1" depth="28"/>
 </node>
 </node>
 </node>
@@ -62,4 +59,5 @@
 </node>
 </node>
 </node>
-</top>
+</node>
+</node>
