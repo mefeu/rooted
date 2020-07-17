@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="index.xslt" type="text/xsl"?>
+<top>
 <node id="0" text="Life">
 <node id="1" text="Eukaryota">
 <node id="1000" text="Opisthokonta">
@@ -62,3 +63,4 @@
 </node>
 </node>
 </node>
+</top>

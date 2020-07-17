@@ -56,8 +56,8 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                         new = ET.fromstring('<node text="' + name + '"/>')
                         print(new)
                         elem.append(new)
-
-               elif addAs == 'parent':
+            if 'text' in elem.attrib:
+               if addAs == 'parent':
                      if elem.attrib['text'] == ref:
                         x = 0
                         parent = elem.getparent()
