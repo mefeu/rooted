@@ -1,6 +1,6 @@
 <?xml-stylesheet href="index.xslt" type="text/xsl"?>
-<top width="7" depth="0">
-<node id="0" text="Life" width="7" depth="1">
+<top width="10" depth="0">
+<node id="0" text="Life" width="10" depth="1">
 <node id="1" text="Eukaryota" width="4" depth="2">
 <node id="1000" text="Opisthokonta" width="4" depth="3">
 <node id="2000" text="Holozoa" width="4" depth="4">
@@ -61,5 +61,5 @@
 </node>
 </node>
 </node>
-<node text="Archaea" width="2" depth="2"><node text="Candidatus Verstraetearchaeota" width="1" depth="3"/><node text="Hadesarchaea" width="1" depth="3"/></node><node text="Bacteria" width="1" depth="2"><node text="Raoultella" width="1" depth="3"><node text="Enterobacter sp. MSG6" width="1" depth="4"/></node></node></node>
+<node text="Archaea" width="2" depth="2"><node text="Candidatus Verstraetearchaeota" width="1" depth="3"/><node text="Hadesarchaea" width="1" depth="3"/></node><node text="Bacteria" width="4" depth="2"><node text="Raoultella" width="1" depth="3"><node text="Enterobacter sp. MSG6" width="1" depth="4"/></node><node text="Cedecea" width="1" depth="3"/><node text="Candidatus Blochmannia" width="1" depth="3"/><node text="Thermolithobacterales" width="1" depth="3"/></node></node>
 </top>

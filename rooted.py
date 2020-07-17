@@ -13,7 +13,7 @@ def treeWidth(tree):
         width = 0
         while it < count:
             width = width + treeWidth(tree.getchildren()[it])
-            it = it + 1
+            it += 1
         return width
 
 def treeDepth(node):
@@ -40,11 +40,6 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
         if 'ref' in query_components:
         	   ref =  query_components["ref"][0]
 
-#        tree = ET.parse('tree.xml')
-#        for elem in tree.iter():
-#            print(elem.attrib)
-#            print(elem.tag)
-#            print(elem.tag['id'])
         tree = ET.parse('tree.xml')
         for elem in tree.iter():
     			#print(treeDepth(elem))
@@ -56,7 +51,16 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                         new = ET.fromstring('<node text="' + name + '"/>')
                         print(new)
                         elem.append(new)
-
+                        self.send_header("Content-type", "text/html")
+                        self.end_headers()
+                        html = f'<html><head><meta http-equiv="refresh" content="0; url=https://rooted.ddnss.de/tree.xml" /></head><body><h1>Processing...</h1></body></html>'
+                        self.wfile.write(bytes(html, "utf8"))
+                        for elem in tree.iter():		
+                           elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))
+                           elem.set('depth', value=str(treeDepth(elem)).encode("utf-8").decode("utf-8"))
+                        with open('./tree.xml', 'w') as f:
+                           f.write(ET.tostring(tree, pretty_print=True).decode("utf-8"))
+                        return
                elif addAs == 'parent':
                      if elem.attrib['text'] == ref:
                         x = 0
@@ -69,6 +73,16 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                               new.append(tmp)
                               parent.append(new)
                            x = x + 1
+                     self.send_header("Content-type", "text/html")
+                     self.end_headers()
+                     html = f'<html><head><meta http-equiv="refresh" content="0; url=https://rooted.ddnss.de/tree.xml" /></head><body><h1>Processing...</h1></body></html>'
+                     self.wfile.write(bytes(html, "utf8"))
+                     for elem in tree.iter():		
+                        elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))
+                        elem.set('depth', value=str(treeDepth(elem)).encode("utf-8").decode("utf-8"))
+                     with open('./tree.xml', 'w') as f:
+                        f.write(ET.tostring(tree, pretty_print=True).decode("utf-8"))
+                     return
                	
         for elem in tree.iter():		
             elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))

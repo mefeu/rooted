@@ -17,14 +17,14 @@
     </span>
             <form action="/tree.xml">
   <label for="name">Name:</label><br/>
-  <input type="text" id="name" name="name" value="" required="true"/><br/>
+  <input type="text" id="name" name="name" value="" required="true"/><br/><br/>
   <label for="ref">Reference:</label><br/>
   <input type="text" id="ref" name="ref" value="" required="true"/><br/>
   <label for="addAs">add as:</label><br/>
   <select id="addAs" name="addAs">
   <option>parent</option>
   <option>child</option>
-  </select><br/><br/>
+  </select><br/>
   <input type="submit" value="Submit"/>
 	</form> 
 </div>
