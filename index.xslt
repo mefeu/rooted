@@ -22,8 +22,8 @@
   <input type="text" id="ref" name="ref" value="" required="true"/><br/>
   <label for="addAs">add as:</label><br/>
   <select id="addAs" name="addAs">
-  <option>parent</option>
   <option>child</option>
+  <option>parent</option>
   </select><br/><br/>
   <input type="submit" value="Submit"/>
 	</form> 

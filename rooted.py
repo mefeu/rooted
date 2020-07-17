@@ -53,7 +53,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                         elem.append(new)
                         self.send_header("Content-type", "text/html")
                         self.end_headers()
-                        html = f'<html><head><meta http-equiv="refresh" content="0; url=https://rooted.ddnss.de/tree.xml" /></head><body><h1>Processing...</h1></body></html>'
+                        html = f'<html><head><meta http-equiv="refresh" content="1; url=https://rooted.ddnss.de/tree.xml" /></head><body><h1>Processing...<br/>' + name + ' as ' + addAs + ' from ' + ref + '</h1></body></html>'
                         self.wfile.write(bytes(html, "utf8"))
                         for elem in tree.iter():		
                            elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))
@@ -75,7 +75,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                            x = x + 1
                      self.send_header("Content-type", "text/html")
                      self.end_headers()
-                     html = f'<html><head><meta http-equiv="refresh" content="0; url=https://rooted.ddnss.de/tree.xml" /></head><body><h1>Processing...</h1></body></html>'
+                     html = f'<html><head><meta http-equiv="refresh" content="1; url=https://rooted.ddnss.de/tree.xml" /></head><body><h1>Processing...<br/>' + name + ' as ' + addAs + ' from ' + ref + '</h1></body></html>'
                      self.wfile.write(bytes(html, "utf8"))
                      for elem in tree.iter():		
                         elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))
