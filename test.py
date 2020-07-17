@@ -62,5 +62,5 @@ hallo="""
             #print(ET.tostring(tree, pretty_print=True)) 
 """
 print(ET.tostring(tree, pretty_print=True))
-with open('./output.xml', 'wb') as f:
-    f.write(ET.tostring(tree, pretty_print=True))
+with open('./tree.xml', 'w') as f:
+    f.write(ET.tostring(tree, pretty_print=True).decode("utf-8"))
