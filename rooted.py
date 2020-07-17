@@ -2,6 +2,7 @@ import http.server
 import socketserver
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
+import xml.etree.ElementTree as ET
 
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -16,11 +17,17 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
 
         # Extract query param
         #name = 'World'
-        #query_components = parse_qs(urlparse(self.path).query)
-        #print(query_components)
+        query_components = parse_qs(urlparse(self.path).query)
+        print(query_components)
         #if 'name' in query_components:
         #    name = query_components["name"][0]
-        print('hallo')
+
+#        tree = ET.parse('tree.xml')
+#        for elem in tree.iter():
+#            print(elem.attrib)
+#            print(elem.tag)
+#            print(elem.tag['id'])
+
         with open('/var/www/rooted/tree.xml', 'rb') as file:
             self.wfile.write(file.read())
             print(file.read().decode())
