@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="index.xslt" type="text/xsl"?>
-<top width="13" depth="0">
-<node id="0" text="Life" width="13" depth="1">
+<top width="14" depth="0">
+<node id="0" text="Life" width="14" depth="1">
 <node id="1" text="Eukaryota" width="7" depth="2">
 <node id="1000" text="Opisthokonta" width="5" depth="3">
 <node id="2000" text="Holozoa" width="5" depth="4">
@@ -61,5 +62,5 @@
 </node>
 </node>
 <node text="Nucletmycea" width="2" depth="3"><node text="Fungi" width="1" depth="4"/><node text="Discicristoidea" width="1" depth="4"/></node></node>
-<node text="Archaea" width="2" depth="2"><node text="Candidatus Verstraetearchaeota" width="1" depth="3"/><node text="Hadesarchaea" width="1" depth="3"/></node><node text="Bacteria" width="4" depth="2"><node text="Raoultella" width="1" depth="3"><node text="Enterobacter sp. MSG6" width="1" depth="4"/></node><node text="Cedecea" width="1" depth="3"/><node text="Candidatus Blochmannia" width="1" depth="3"/><node text="Thermolithobacterales" width="1" depth="3"/></node></node>
+<node text="Archaea" width="2" depth="2"><node text="Candidatus Verstraetearchaeota" width="1" depth="3"/><node text="Hadesarchaea" width="1" depth="3"/></node><node text="Bacteria" width="5" depth="2"><node text="Raoultella" width="1" depth="3"><node text="Enterobacter sp. MSG6" width="1" depth="4"/></node><node text="Cedecea" width="1" depth="3"/><node text="Candidatus Blochmannia" width="1" depth="3"/><node text="Thermolithobacterales" width="1" depth="3"/><node text="Trabulsiella" width="1" depth="3"><node text="Trabulsiella sp. 38" width="1" depth="4"/></node></node></node>
 </top>

@@ -3,27 +3,24 @@
 <xsl:template match="top">
 <html>
 <head>
-    <title>Rooted</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+<title>Rooted</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 <div class="bar navbar">
-    <span class="title">
- 			<a href="https://rooted.ddnss.de/tree.xml"><img src="assets/icon.svg" alt="rooted" width="200" class="logo"/></a>
-    </span>
-    <span class="search">
-        <input autocomplete="off" placeholder="Suche"/>
-
-    </span>
-    
-
-    <div class="tree">
-    <form action="/tree.xml">
-  	<label for="name">Name:</label><br/>
-  	<input type="text" id="name" name="name" value="" required="true"/><br/>
-  	<lable for="ref">Reference:</lable><br/>
-    <select id="ref" name="Reference:">
-    
+<span class="title">
+<a href="https://rooted.ddnss.de/tree.xml"><img src="assets/icon.svg" alt="rooted" width="200" class="logo"/></a>
+</span>
+<span class="search">
+<input autocomplete="off" placeholder="Suche"/>
+</span>
+<div class="tree">
+<form action="/tree.xml">
+<label for="name">Name:</label><br/>
+<input type="text" id="name" name="name" value="" required="true"/><br/>
+<lable for="ref">Reference:</lable><br/>
+<select id="ref" name="ref">
+ 
     <xsl:apply-templates select="node"/>
 
 </select><br/>

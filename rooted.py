@@ -29,7 +29,8 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_response(200)
 
         query_components = parse_qs(urlparse(self.path).query)
-        print(query_components)
+        if query_components != None:
+           print(query_components)
         name = None
         addAs = None
         ref = None
@@ -41,6 +42,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
         	   ref =  query_components["ref"][0]
 
         tree = ET.parse('tree.xml')
+        print(ET.tostring(tree, pretty_print=True).decode("utf-8"))
         for elem in tree.iter():
     			#print(treeDepth(elem))
     			#print(elem.attrib)
@@ -48,6 +50,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             if 'text' in elem.attrib:
                if addAs == 'child':
                      if elem.attrib['text'] == ref:
+                        print('match')
                         new = ET.fromstring('<node text="' + name + '"/>')
                         print(new)
                         elem.append(new)
@@ -59,6 +62,8 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                            elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))
                            elem.set('depth', value=str(treeDepth(elem)).encode("utf-8").decode("utf-8"))
                         with open('./tree.xml', 'w') as f:
+                           f.write('<?xml version="1.0" encoding="utf-8"?>\n')
+                        with open('./tree.xml', 'a') as f:
                            f.write(ET.tostring(tree, pretty_print=True).decode("utf-8"))
                         return
                elif addAs == 'parent':
@@ -81,6 +86,8 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                         elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))
                         elem.set('depth', value=str(treeDepth(elem)).encode("utf-8").decode("utf-8"))
                      with open('./tree.xml', 'w') as f:
+                        f.write('<?xml version="1.0" encoding="utf-8"?>\n')
+                     with open('./tree.xml', 'a') as f:
                         f.write(ET.tostring(tree, pretty_print=True).decode("utf-8"))
                      return
                	
@@ -88,6 +95,8 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))
             elem.set('depth', value=str(treeDepth(elem)).encode("utf-8").decode("utf-8"))
         with open('./tree.xml', 'w') as f:
+            f.write('<?xml version="1.0" encoding="utf-8"?>\n')
+        with open('./tree.xml', 'a') as f:
             f.write(ET.tostring(tree, pretty_print=True).decode("utf-8"))
 
         # Setting the header

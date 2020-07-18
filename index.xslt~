@@ -15,14 +15,14 @@
         <input autocomplete="off" placeholder="Suche"/>
 
     </span>
-    </div>
+    
 
     <div class="tree">
     <form action="/tree.xml">
   	<label for="name">Name:</label><br/>
   	<input type="text" id="name" name="name" value="" required="true"/><br/>
   	<lable for="ref">Reference:</lable><br/>
-    <select id="ref" name="Reference:">
+    <select id="ref" name="ref">
     
     <xsl:apply-templates select="node"/>
 
@@ -35,7 +35,7 @@
   </select><br/><br/>
   <input type="submit" value="Submit"/>
 	</form> 
-    </div>
+    </div></div>
 </body>
 </html>
 </xsl:template>

@@ -1,0 +1,15 @@
+.node > rect {
+  fill:silver;
+}
+.node > text {
+  font-size:24;
+  font-weight:bold;
+}
+.edge {
+  fill:black;
+  stroke:black;
+  stroke-width:20;
+}
+.edge.directed {
+  marker-end:url(#arrow);
+}
