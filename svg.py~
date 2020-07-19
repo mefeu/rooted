@@ -1,0 +1,31 @@
+from  lxml import etree as ET
+import svgling
+from svgling.figure import Caption, SideBySide, RowByRow
+
+tree = ET.parse('tree.xml')
+
+def treeForEval(tree):
+	if len(tree.getchildren()) == 0:
+		out = '"' + tree.attrib['text'] + '"'
+		return out
+	else:
+		count = len(tree.getchildren())
+		it = 0
+		out = '"' + tree.attrib['text'] + '"'
+		while it < count:
+			out += ", (" + treeForEval(tree.getchildren()[it]) + ")"
+			it += 1
+		#out += ")"
+	return out
+
+for elem in tree.iter():
+	if 'text' in elem.attrib:
+		if elem.attrib['text'] == 'Life':
+			print(treeForEval(elem))
+			
+#			t = svgling.draw_tree(("Life", ("Eukaryota", ("Opisthokonta", ("Holozoa", ("Metazoa", ("Bilateria", ("Deuterostomia", ("Choradata", ("Caraniata", ("Vertebrata", ("Gnathostomata", ("Teleostomi", ("Euteleostomi", ("Sarcopterygii", ("Dipnotetrapodomorpha", ("Tetrapoda", ("Amniota", ("Mammalia", ("Theria", ("Eutheria", ("Boreoeutheria", ("Primates", ("Haplorrhini", ("Simiiformes", ("Catarrhini", ("Homininae", ("Homo", "Homo sapiens"), "Homo heidelbergensis"))), ("Ponginae", ("Pongo", "Pongo abelii"), "Pongo pygmaeus")))))), "Strepsirrhini"))))))))))))))))))))), ("Nucletmycea", "Fungi"), "Discicristoidea"))), ("Archaea", "Candidatus Verstraetearchaeota"), "Hadesarchaea")), ("Bacteria", ("Raoultella", "Enterobacter sp. MSG6")), "Cedecea"), "Candidatus Blochmannia"), "Thermolithobacterales"), ("Trabulsiella", "Trabulsiella sp. 38"), "Trabulsiella sp. UIWRF1158"))))
+#			t.get_svg().saveas("tree.svg")
+			#t = svgling.draw_tree("Life", ("Eukaryota", ("Opisthokonta", ("Holozoa", ("Metazoa", ("Bilateria", ("Deuterostomia", ("Choradata", ("Caraniata", ("Vertebrata", ("Gnathostomata", ("Teleostomi", ("Euteleostomi", ("Sarcopterygii", ("Dipnotetrapodomorpha", ("Tetrapoda", ("Amniota", ("Mammalia", ("Theria", ("Eutheria", ("Boreoeutheria", ("Primates", ("Haplorrhini", ("Simiiformes", ("Catarrhini", ("Homininae", ("Homo", ("Homo sapiens"), ("Homo heidelbergensis"))), ("Ponginae", ("Pongo", ("Pongo abelii"), ("Pongo pygmaeus")))))), ("Strepsirrhini")))))))))))))))))))))))
+			t = svgling.draw_tree(eval(treeForEval(elem)))
+#t = svgling.draw_tree("Life", 'Bacteria', "Eucariont", ("NP", "D The", ("AdjP", ("AdvP", "Adv very"), "Adj small"), "N boy"), ("VP", "V kissed", ("NP", "D the", "N platypus")), leaf_nodes_align=False)
+			t.get_svg().saveas("tree.svg")

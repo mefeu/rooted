@@ -3,6 +3,7 @@ from  lxml import etree as ET
 tree = ET.parse('tree.xml')
 print(ET.tostring(tree, pretty_print=True).decode("utf-8"))
 
+hallo="""
 def treeWidth(tree):
     if len(tree.getchildren()) == 0:
         return 1
@@ -62,3 +63,4 @@ for elem in tree.iter():
 print(ET.tostring(tree, pretty_print=True))
 with open('./tree.xml', 'w') as f:
     f.write(ET.tostring(tree, pretty_print=True).decode("utf-8"))
+"""

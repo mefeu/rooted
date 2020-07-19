@@ -32,7 +32,10 @@
   </select><br/><br/>
   <input type="submit" value="Submit"/>
 	</form> 
-    </div></div>
+    </div>
+    <object data="tree.svg" type="image/svg+xml" width="100%">
+    <img src="tree.svg" alt="rooted" width="100%"/>
+    </object></div>
 </body>
 </html>
 </xsl:template>

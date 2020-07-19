@@ -1,34 +1,65 @@
-<?xml-stylesheet href="tmp.xslt" type="text/xsl"?>
-<graphml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<graph id="G" edgedefault="directed">
-  <node id="d1e2"/>
-  <node id="d1e4"/>
-  <node id="d1e7"/>
-  <node id="d1e9"/>
-  <node id="d1e11"/>
-  <node id="d1e14"/>
-  <node id="d1e17"/>
-  <node id="d1e21"/>
-  <node id="d1e23"/>
-  <node id="d1e26"/>
-  <node id="d1e29"/>
-  <node id="d1e33"/>
-  <node id="d1e35"/>
-  <node id="d1e38"/>
-  <node id="d1e41"/>
-  <edge source="d1e2" target="d1e4"/>
-  <edge source="d1e2" target="d1e7"/>
-  <edge source="d1e7" target="d1e9"/>
-  <edge source="d1e9" target="d1e11"/>
-  <edge source="d1e9" target="d1e14"/>
-  <edge source="d1e9" target="d1e17"/>
-  <edge source="d1e7" target="d1e21"/>
-  <edge source="d1e21" target="d1e23"/>
-  <edge source="d1e21" target="d1e26"/>
-  <edge source="d1e21" target="d1e29"/>
-  <edge source="d1e7" target="d1e33"/>
-  <edge source="d1e33" target="d1e35"/>
-  <edge source="d1e33" target="d1e38"/>
-  <edge source="d1e33" target="d1e41"/>
-</graph>
-</graphml>
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="index.xslt" type="text/xsl"?>
+<top width="14" depth="0">
+<node id="0" text="Life" width="14" depth="1">
+<node id="1" text="Eukaryota" width="7" depth="2">
+<node id="1000" text="Opisthokonta" width="5" depth="3">
+<node id="2000" text="Holozoa" width="5" depth="4">
+<node id="4000" text="Metazoa" width="5" depth="5">
+<node id="5000" text="Bilateria" width="5" depth="6">
+<node id="10000" text="Deuterostomia" width="5" depth="7">
+<node id="20000" text="Choradata" width="5" depth="8">
+<node id="21000" text="Caraniata" width="5" depth="9">
+<node id="23000" text="Vertebrata" width="5" depth="10">
+<node id="27000" text="Gnathostomata" width="5" depth="11">
+<node id="30000" text="Teleostomi" width="5" depth="12">
+<node id="31000" text="Euteleostomi" width="5" depth="13">
+<node id="32000" text="Sarcopterygii" width="5" depth="14">
+<node id="34000" text="Dipnotetrapodomorpha" width="5" depth="15">
+<node id="50000" text="Tetrapoda" width="5" depth="16">
+<node id="55000" text="Amniota" width="5" depth="17">
+<node id="59000" text="Mammalia" width="5" depth="18">
+<node id="70000" text="Theria" width="5" depth="19">
+<node id="75000" text="Eutheria" width="5" depth="20">
+<node id="79000" text="Boreoeutheria" width="5" depth="21">
+<node id="92000" text="Primates" width="5" depth="22">
+<node id="100000" text="Haplorrhini" width="4" depth="23">
+<node id="120000" text="Simiiformes" width="4" depth="24">
+<node id="170000" text="Catarrhini" width="4" depth="25">
+<node id="200000" text="Homininae" width="2" depth="26">
+<node id="250000" text="Homo" width="2" depth="27">
+<node id="300000" text="Homo sapiens" width="1" depth="28"/>
+<node id="300001" text="Homo heidelbergensis" width="1" depth="28"/>
+</node>
+</node>
+<node id="200001" text="Ponginae" width="2" depth="26">
+<node id="200011" text="Pongo" width="2" depth="27">
+<node id="200012" text="Pongo abelii" width="1" depth="28"/>
+<node id="200013" text="Pongo pygmaeus" width="1" depth="28"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node text="Strepsirrhini" width="1" depth="23"/></node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</top>
