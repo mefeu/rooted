@@ -7,8 +7,7 @@
 <node id="2000" text="Holozoa" width="6" depth="4">
 <node id="4000" text="Metazoa" width="6" depth="5">
 <node id="5000" text="Bilateria" width="6" depth="6">
-<node id="10000" text="Deuterostomia" width="6" depth="7">
-<node id="20000" text="Choradata" width="6" depth="8">
+<node text="Deuterostomia"><node id="20000" text="Choradata" width="6" depth="8">
 <node id="21000" text="Caraniata" width="6" depth="9">
 <node id="23000" text="Vertebrata" width="6" depth="10">
 <node id="27000" text="Gnathostomata" width="6" depth="11">
@@ -41,7 +40,7 @@
 </node>
 </node>
 </node>
-<node text="Strepsirrhini" width="1" depth="23"/><node text="Progaleopithecus" width="1" depth="24"/></node>
+<node text="Strepsirrhini" width="1" depth="23"/><node text="Galeopithecidae"><node text="Progaleopithecus" width="1" depth="24"/></node></node>
 </node>
 </node>
 </node>
@@ -56,11 +55,10 @@
 </node>
 </node>
 </node>
-</node>
-</node>
+</node></node>
 </node>
 </node>
 </node>
 <node text="Nucletmycea" width="2" depth="3"><node text="Fungi" width="1" depth="4"/><node text="Discicristoidea" width="1" depth="4"/></node></node>
-<node text="Archaea" width="5" depth="2"><node text="Candidatus Verstraetearchaeota" width="1" depth="3"/><node text="Hadesarchaea" width="1" depth="3"/><node text="Thermococci" width="1" depth="3"><node text="Thermococcales" width="1" depth="4"/></node><node text="Korarchaeota" width="1" depth="3"/><node text="Nanoarchaeota" width="1" depth="3"/></node><node text="Bacteria" width="6" depth="2"><node text="Raoultella" width="1" depth="3"><node text="Enterobacter sp. MSG6" width="1" depth="4"/></node><node text="Cedecea" width="1" depth="3"/><node text="Candidatus Blochmannia" width="1" depth="3"/><node text="Thermolithobacterales" width="1" depth="3"/><node text="Trabulsiella" width="2" depth="3"><node text="Trabulsiella sp. 38" width="1" depth="4"/><node text="Trabulsiella sp. UIWRF1158" width="1" depth="4"/></node></node></node>
+<node text="Archaea" width="5" depth="2"><node text="Candidatus Verstraetearchaeota" width="1" depth="3"/><node text="Hadesarchaea" width="1" depth="3"/><node text="Thermococci" width="1" depth="3"><node text="Thermococcales" width="1" depth="4"/></node><node text="Korarchaeota" width="1" depth="3"/><node text="Nanoarchaeota" width="1" depth="3"/></node><node text="Bacteria" width="6" depth="2"><node text="Raoultella" width="1" depth="3"><node text="Enterobacter sp. MSG6" width="1" depth="4"/></node><node text="Cedecea" width="1" depth="3"/><node text="Candidatus Blochmannia" width="1" depth="3"/><node text="Thermolithobacterales" width="1" depth="3"/><node text="Trabulsiella" width="2" depth="3"><node text="Trabulsiella sp. 38" width="1" depth="4"/><node text="Trabulsiella sp. UIWRF1158" width="1" depth="4"/></node><node text="Limnochordia"/></node></node>
 </top>
