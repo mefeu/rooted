@@ -21,7 +21,7 @@
 <lable for="ref">Reference:</lable><br/>
 <select id="ref" name="ref">
  
-    <xsl:apply-templates select="node"/>
+    <xsl:apply-templates select="node"><xsl:sort select="node"/></xsl:apply-templates>
 
 </select><br/>
     
@@ -32,10 +32,10 @@
   </select><br/><br/>
   <input type="submit" value="Submit"/>
 	</form> 
-    </div><div>
+    </div>
     <object data="tree.svg" type="image/svg+xml" width="100%">
     <img src="tree.svg" alt="rooted" width="100%"/>
-    </object><div></div>
+    </object></div>
 </body>
 </html>
 </xsl:template>

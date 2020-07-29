@@ -80,7 +80,6 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                         self.end_headers()
                         html = f'<html><head><meta http-equiv="refresh" content="0.1; url=https://rooted.ddnss.de/tree.xml" /></head><body><h1>Deleting...</h1></body></html>'
                         self.wfile.write(bytes(html, "utf8"))
-                        print("feddisch delete")
                         return
 
         for elem in tree.iter():
@@ -143,7 +142,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                     #   elem.set('width', value=str(treeWidth(elem)).encode("utf-8").decode("utf-8"))
                     #   elem.set('depth', value=str(treeDepth(elem)).encode("utf-8").decode("utf-8"))
                         with open('./tree.xml', 'w') as f:
-                            f.write('<?xml version="1.0" encoding="utf-8"?>\n')
+                            f.write('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE top SYSTEM "top.dtd">\n')
                         with open('./tree.xml', 'a') as f:
                             f.write(ET.tostring(
                                 tree, pretty_print=True).decode("utf-8"))
@@ -177,6 +176,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
 
 
 # Create an object of the above class
+print('Hallo')
 handler_object = MyHttpRequestHandler
 
 PORT = 8000

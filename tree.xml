@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="index.xslt" type="text/xsl"?>
+<!DOCTYPE top SYSTEM "top.dtd">
+<?xml-stylesheet type="text/xsl" href="index.xslt" ?>
 <top width="19" depth="0">
 <node text="Life" width="19" depth="1">
 <node id="1" text="Eukaryota" width="8" depth="2">
@@ -27,9 +28,9 @@
 <node id="170000" text="Catarrhini" width="4" depth="25">
 <node id="200000" text="Homininae" width="2" depth="26">
 <node id="250000" text="Homo" width="2" depth="27">
-<node id="300000" text="Homo sapiens" width="1" depth="28"/>
+<node id="300000" text="Homo sapiens" width="1" depth="28"><node text="Himo sapiens sapiens"/></node>
 <node id="300001" text="Homo heidelbergensis" width="1" depth="28"/>
-</node>
+<node text="Homo neanderthalensis"/></node>
 </node>
 <node id="200001" text="Ponginae" width="2" depth="26">
 <node id="200011" text="Pongo" width="2" depth="27">

@@ -1,0 +1,12 @@
+<!ELEMENT top (node*)>
+<!ELEMENT node (node*)>
+<!ATTLIST top
+	width	CDATA #IMPLIED
+	depth	CDATA #IMPLIED
+>
+<!ATTLIST node
+	id	ID #IMPLIED
+	text	CDATA #REQUIRED
+	width   CDATA #IMPLIED
+        depth   CDATA #IMPLIED
+>
